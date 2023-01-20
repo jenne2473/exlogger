@@ -23,6 +23,7 @@ annotate LoggerService.LoggedExercises with {
     calc1rm     @title : 'Calc. 1 RM (in kg)';
     lastperf    @title : 'Last Perf.';
     createdBy   @title : 'Created by';
+    wod         @title : 'WOD';
 };
 
 annotate LoggerService.Exercises with @(UI : {
@@ -101,14 +102,16 @@ annotate LoggerService.LoggedExercises with @(UI : {
         lastperf
     ],
     LineItem         : [
+        { $Type: 'UI.DataFieldForAction', Action: 'LoggerService.generateWod', Label: 'Generate WOD' , InvocationGrouping : #ChangeSet},
         {Value : exercise_ID},
         {Value : date},
         {Value : weight},
         {Value : reps},
         {Value : time},
         {Value : calc1rm},
+        {Value : createdBy},
         {Value : lastperf},
-        {Value : createdBy}
+        {Value : wod}
         
     ],
     Facets           : [{
@@ -123,7 +126,8 @@ annotate LoggerService.LoggedExercises with @(UI : {
         {Value : reps},
         {Value : time},
         {Value : calc1rm},
-        {Value : lastperf}
+        {Value : lastperf},
+        {Value : wod}
     ]}
 }, ) {
 
