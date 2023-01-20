@@ -14,22 +14,24 @@ annotate LoggerService.ScoreType with {
 };
 
 annotate LoggerService.LoggedExercises with {
-    exercise    @title : 'Exercise';
-    exercise_ID @title : 'Exercise';
-    weight      @title : 'Weight (in kg)';
-    reps        @title : 'Reps';
-    time        @title : 'Time (in HH:MM:ss)';
-    date        @title : 'Date';
-    calc1rm     @title : 'Calc. 1 RM (in kg)';
-    lastperf    @title : 'Last Perf.';
-    createdBy   @title : 'Created by';
-    wod         @title : 'WOD';
+    exercise    @title : '{i18n>exercise}';
+    exercise_ID @title : '{i18n>exercise}';
+    weight      @title : '{i18n>weightinkg}';
+    reps        @title : '{i18n>reps}';
+    time        @title : '{i18n>time}';
+    distance    @title : '{i18n>distance}';
+    date        @title : '{i18n>date}';
+    calc1rm     @title : '{i18n>calc1rm}';
+    lastperf    @title : '{i18n>lastperf}';
+    createdBy   @title : '{i18n>createdby}';
+    scaled      @title : '{i18n>scaled}';
+    wod         @title : '{i18n>wod}';
 };
 
 annotate LoggerService.Exercises with @(UI : {
     HeaderInfo       : {
-        TypeName       : 'Exercise',
-        TypeNamePlural : 'Exercises',
+        TypeName       : '{i18n>exercise}',
+        TypeNamePlural : '{i18n>exercises}',
         Title          : {
             $Type : 'UI.DataField',
             Value : name
@@ -49,7 +51,7 @@ annotate LoggerService.Exercises with @(UI : {
     ],
     Facets           : [{
         $Type  : 'UI.ReferenceFacet',
-        Label  : 'Item',
+        Label  : '{i18n>item}',
         Target : '@UI.FieldGroup#Main'
     }],
     FieldGroup #Main : {Data : [
@@ -66,7 +68,7 @@ annotate LoggerService.Exercises with {
         Text            : scoredby.description,
         TextArrangement : #TextOnly,
         ValueList       : {
-            Label          : 'Score Types',
+            Label          : '{i18n>scoretypes}',
             CollectionPath : 'ScoreTypes',
             Parameters     : [
                 {
@@ -85,8 +87,8 @@ annotate LoggerService.Exercises with {
 
 annotate LoggerService.LoggedExercises with @(UI : {
     HeaderInfo       : {
-        TypeName       : 'Logged Exercise',
-        TypeNamePlural : 'Logged Exercises',
+        TypeName       : '{i18n>loggedexercise}',
+        TypeNamePlural : '{i18n>loggedexercises}',
         Title          : {
             $Type : 'UI.DataField',
             Value : exercise.name
@@ -102,21 +104,34 @@ annotate LoggerService.LoggedExercises with @(UI : {
         lastperf
     ],
     LineItem         : [
-        { $Type: 'UI.DataFieldForAction', Action: 'LoggerService.generateWod', Label: 'Generate WOD' , InvocationGrouping : #ChangeSet},
+        {
+            $Type              : 'UI.DataFieldForAction',
+            Action             : 'LoggerService.generateWod',
+            Label              : '{i18n>generatewod}',
+            InvocationGrouping : #ChangeSet
+        },
+        {
+            $Type              : 'UI.DataFieldForAction',
+            Action             : 'LoggerService.refresh',
+            Label              : 'Refresh',
+            InvocationGrouping : #ChangeSet
+        },
         {Value : exercise_ID},
         {Value : date},
         {Value : weight},
         {Value : reps},
+        {Value : distance},
         {Value : time},
         {Value : calc1rm},
         {Value : createdBy},
         {Value : lastperf},
+        {Value : scaled},
         {Value : wod}
-        
+
     ],
     Facets           : [{
         $Type  : 'UI.ReferenceFacet',
-        Label  : 'Item',
+        Label  : '{i18n>item}',
         Target : '@UI.FieldGroup#Main'
     }],
     FieldGroup #Main : {Data : [
@@ -124,9 +139,11 @@ annotate LoggerService.LoggedExercises with @(UI : {
         {Value : date},
         {Value : weight},
         {Value : reps},
+        {Value : distance},
         {Value : time},
         {Value : calc1rm},
         {Value : lastperf},
+        {Value : scaled},
         {Value : wod}
     ]}
 }, ) {
@@ -139,7 +156,7 @@ annotate LoggerService.LoggedExercises with {
         Text            : exercise.name,
         TextArrangement : #TextOnly,
         ValueList       : {
-            Label          : 'Exercise',
+            Label          : '{i18n>exercise}',
             CollectionPath : 'Exercises',
             Parameters     : [
                 {

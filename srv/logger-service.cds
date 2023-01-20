@@ -12,11 +12,13 @@ service LoggerService {
         grant : [
             'READ',
             'WRITE',
-            'generateWod'
+            'generateWod',
+            'refresh'
         ],
         where : 'createdBy = $user'
     }, ])                as projection on my.LoggedExercises actions {
         action generateWod();
+        action refresh();
     };
 
     annotate LoggedExercises with @odata.draft.enabled;

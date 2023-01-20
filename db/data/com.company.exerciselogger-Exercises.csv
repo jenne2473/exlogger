@@ -1,11 +1,28 @@
 ID;name;scoredby_ID
-447cbc84-1498-4604-a6f1-deac3b1e9e44;Back Squat;9b3c196f-3c66-4f6c-9800-9709b439695e
-9ff0e179-7b68-4a78-96c7-c53e23e5e2e8;Dead Lift;9b3c196f-3c66-4f6c-9800-9709b439695e
-2e4ac404-6ac2-4f8b-af46-4788580b8b2c;Bench Press;9b3c196f-3c66-4f6c-9800-9709b439695e
-6d1397f7-e881-4b1f-92d0-d4107374109d;Power Clean;9b3c196f-3c66-4f6c-9800-9709b439695e
-2af98b93-3205-42d5-a264-b8c00d853217;Squat Clean;9b3c196f-3c66-4f6c-9800-9709b439695e
-e4bb5606-c125-4d4c-af10-1231869db1c7;Pull Up;1939a104-fd56-49b0-84d6-67d42a7b0d10
-7653d20b-8d82-4251-a7d4-bcecd3363624;Push Up;1939a104-fd56-49b0-84d6-67d42a7b0d10
-750ce885-b468-48ef-8652-d01d208f9efd;Overhead Press;9b3c196f-3c66-4f6c-9800-9709b439695e
-947343b6-0854-4de7-b241-373c13c3c796;Burpee;666d5503-d7f8-4788-9f78-c50a2c900c05
-3ce0d1ce-d475-4bdd-9456-77ec3a2a9a3d;C2 Rowerg (1000 Meter);ecb28fb0-150d-4eee-bc4a-969e7739bd90
+Back Squat;Back Squat;9b3c196f-3c66-4f6c-9800-9709b439695e
+Bench Press;Bench Press;9b3c196f-3c66-4f6c-9800-9709b439695e
+Burpee;Burpee;666d5503-d7f8-4788-9f78-c50a2c900c05
+Burpee Box Jump Over;Burpee Box Jump Over;
+Burpee over Bar;Burpee over Bar;
+C2 BikeErg;C2 BikeErg;
+C2 RowErg;C2 RowErg;ecb28fb0-150d-4eee-bc4a-969e7739bd90
+C2 SkiErg;C2 SkiErg;
+Clean and Jerk;Clean and Jerk;
+Cluster;Cluster (Squat Clean w/ Thruster);
+DB Snatches;Dumbbell Snatches;
+Dead Lift;Dead Lift;9b3c196f-3c66-4f6c-9800-9709b439695e
+Double Unders;Double Unders;
+Hang Power Clean;Hang Power Clean;
+Hang Squat Clean;Hang Squat Clean;
+OH Press;Overhead Press;9b3c196f-3c66-4f6c-9800-9709b439695e
+OH Squat;Overhead Squat;
+Power Clean;Power Clean;9b3c196f-3c66-4f6c-9800-9709b439695e
+Pull Up;Pull Up;1939a104-fd56-49b0-84d6-67d42a7b0d10
+Push Up;Push Up / HR Push Up;1939a104-fd56-49b0-84d6-67d42a7b0d10
+Run;Run;
+Squat Clean;Squat Clean;9b3c196f-3c66-4f6c-9800-9709b439695e
+Toes to Bar;Toes to Bar;
+Thruster;Thruster;
+Wall Balls;Wall Balls;
+
+

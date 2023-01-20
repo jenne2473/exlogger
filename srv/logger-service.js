@@ -43,7 +43,6 @@ module.exports = function (srv) {
     
     const { LoggedExercises } = this.entities('LoggedExercises');
     this.on('generateWod', async req => {
-        console.log("----> Generate WOD");
         const { LoggedExercises } = srv.entities;
          const loggedExercises = await srv.read(LoggedExercises).where({
              ID: req.params[0].ID
@@ -54,5 +53,9 @@ module.exports = function (srv) {
             UPDATE(LoggedExercises).set({ wod: wodname}).where({ ID: req.params[0].ID }),
         ]).catch(() => req.reject(400, 'Error'))
     })
+
+    this.on('refresh', req => {
+        console.log("----> Refresh triggered");
+    });
 
 }    
