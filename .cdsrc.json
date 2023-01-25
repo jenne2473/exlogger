@@ -1,1 +1,5 @@
-{}
+{
+    "features": {
+		"in_memory_db": true
+	}
+}
