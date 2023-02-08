@@ -17,6 +17,7 @@ service LoggerService {
         ],
         where : 'createdBy = $user'
     }, ])                as projection on my.LoggedExercises actions {
+        @(Common.SideEffects.TargetEntities: ['/LoggerService.EntityContainer/LoggedExercises'])
         action generateWod();
         action refresh();
     };
